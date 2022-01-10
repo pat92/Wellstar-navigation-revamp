@@ -1,0 +1,51 @@
+POINTS TO REMEMBER
+Responsive vsb adaptive
+this is responsive design which serves same website on all screen reso. ex phone desktop 
+vs the adaptive design for which we need separate src code for separate screen size
+
+1. use google mobile friendly test to get mobile score
+2. move all navigation to bottom right so that in reach of thumb and easily navigable with in the reach of hand
+3. Lazy loading component
+4. Using SVG images to load images faster and save data as they are smaller in size consumes less data
+5. all these 4 pts will help increase page rank and help improve the SEO (search engine opt) score
+
+
+
+SEO - search Engine 
+TIER 1 LINKS:
+- Urgent Care
+- Emergency Care
+- Find a Doctor
+- Find a Location
+- Our Services
+- Pay Your Bill
+- Your Medical Record (MyChart)
+
+
+Wellstar Color Palette
+
+Purple - #8347ad
+Blue - #0086b4
+White - #fafbfd
+Black - #30363c
+
+Background Colors:
+  - Default #fafbfd
+  - Alternative Light #edf1f5
+  - Alternative Medium #dce3eb
+  - Purple #8347ad
+
+Feedback Status Colors:
+  - Success #3dae2b
+  - Warning #f3c300
+  - Error/Critical #d7282f
+
+Interactive Colors:
+ - Default #0086b4
+ - Hover State #006b90
+ - Focus State #00a7e1
+
+Text Colors:
+  - Default #3c444b
+  - Subdued #5e6a75
+  - Links #0086b4

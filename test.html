@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Template for the new android layout">
+      <meta name="author" content="Andrew Henry">
+      <link rel="icon" href="#">
+      <title>Bootstrap Nav Template</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="css/main.css"> -->
+      <style>
+      html {
+        position: relative;
+        min-height: 100%;
+      }
+      
+      body {
+        margin-bottom: 80px;
+        margin-top: 60px;
+      }
+      
+      .footer {
+          position:fixed;
+           bottom: 0;
+           width: 100%;
+           height: 60px;
+           background-color: #f5f5f5;
+      
+          border-top: 1px solid transparent;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      navbar {
+          border-top: 10px solid transparent!important;
+          box-shadow: 0 6px 5px rgb(0 0 0 / 20%);
+          border-bottom: 5px solid transparent!important;
+         
+              position: relative;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+              -ms-flex-align: center;
+              align-items: center;
+              -ms-flex-pack: justify;
+              justify-content: space-between;
+              padding: 1rem 1rem!important;
+          
+      }
+      
+      .group-container{
+          padding:0;
+          height:100%;
+      }
+      
+      .selectors, .block{
+          height:100%;
+          width:100%;
+      }
+      
+      .selectors button{
+          border: 0;
+          border-radius: 0;
+          background-color: #f8f9fa !important;
+          width:25%;
+          margin-left: 0;
+      }
+      
+      .selectors button:active{
+          border:0;
+      }
+      
+      .selectors button:focus{
+          border:0;
+          outline: 0;
+          box-shadow: 0 0 0 0px;
+      }
+      
+      .active, .selector-holder{
+          display: flex;
+          flex-direction: column;
+      }
+      
+      .inactive{
+          display: none;
+      }
+      
+      .selector-holder span{
+          font-size: 0.8rem;
+      }
+      
+      /* Colors of the buttons*/
+      .button-active, .selectors button:hover, .selectors button:active, .selectors button:focus{
+          color: #006b90;
+      }
+      
+      .button-inactive{
+          color: #000;
+      }
+      .bg-light {
+          background-color: #edf1f5!important;
+          padding: .75rem 1rem!important;
+      }
+      .image{
+          background-image: url("https://www.wellstar.org/-/media/Themes/WellStar/Org/WellStarOrg/WellStarTheme/images/wellstar-logo.svg");
+          color: transparent;
+          height: 30px;
+          width: 123px;
+      }
+      .container-fluid{
+          background-color: #fafbfd;
+          color: #3c444b;
+          background-image: url("https://www.wellstar.org/-/media/project/wellstar/org/homepageimages/safecare-mobile.png")!important;
+          width: 100%;
+          height: 100%;
+          margin-right: auto;
+          margin-left: auto;
+          padding-right: 15px;
+          padding-left: 15px;
+      }
+      .home-hero-ctas.wide {
+          max-width: none;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      @media (min-width: 992px){
+      .home-hero-ctas.wide {
+          width: 820px;
+      }}
+      @media (min-width: 992px){
+      .home-hero-ctas {
+          margin-left: 0;
+      }}
+      @media (min-width: 992px){
+      .home-hero-ctas.wide a.home-hero-cta {
+          width: 50%;
+          height: 68px;
+      }}
+      @media (min-width: 992px){
+      .home-hero-ctas.wide a.home-hero-cta {
+          padding: 20px 20px 20px 20px !important;
+      }}
+      .home-hero-ctas.wide a.home-hero-cta {
+          height: auto !important;
+          padding-bottom: 15px;
+      }
+      @media (min-width: 992px){
+      .home-hero-ctas a.home-hero-cta {
+          height: 68px;
+          padding-top: 1.3rem;
+          text-align: left;
+          padding-left: 4rem;
+          margin: .5rem .35rem;
+          font-size: 16px;
+          letter-spacing: -.5px;
+      }}
+      .home-hero-ctas a.home-hero-cta {
+          border-radius: 4px;
+          height: 88px;
+          position: relative;
+          transition: all .2s;
+          background-color: hsl(0,0%,100%);
+          display: inline-block;
+          padding-top: 50px;
+          margin: .35rem .25rem;
+          width: 45%;
+          text-align: center;
+          color: hsl(275,42%,48%);
+          font-size: 14px;
+          letter-spacing: -1px;
+          box-shadow: 0 1px 4px rgb(0 0 0 / 45%);
+      }
+      a {
+          color: hsl(195,100%,28%);
+          text-decoration: none;
+          background-color: transparent;
+      }
+      /* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+          margin: 0;
+          padding: 0;
+          border: 0;
+          outline: 0;
+          font-weight: inherit;
+          font-style: inherit;
+          font-size: 100%;
+          font-family: inherit;
+          vertical-align: baseline;
+      } */
+      * {
+          --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+          --tw-ring-offset-width: 0px;
+          --tw-ring-offset-color: #fff;
+          --tw-ring-color: rgba(59,130,246,0.5);
+          --tw-ring-offset-shadow: 0 0 transparent;
+          --tw-ring-shadow: 0 0 transparent;
+      }
+      * {
+          --tw-shadow: 0 0 transparent;
+      }
+      *, *::before, *::after {
+          box-sizing: border-box;
+      }
+      html, body {
+          width: 100%;
+          height: 100%;
+          color: hsl(0,0%,35%);
+          font-family: "Work Sans",Arial,sans-serif;
+          -moz-font-feature-settings: "kern" 1,"liga" 1,"ss01" 1,"ss06" 1;
+          -moz-font-feature-settings: "kern=1, liga=1, ss01=1, ss06=1";
+          -ms-font-feature-settings: "kern" 1,"liga" 1,"ss01" 1,"ss06" 1;
+          -o-font-feature-settings: "kern" 1,"liga" 1,"ss01" 1,"ss06" 1;
+          font-feature-settings: "kern" 1,"liga" 1,"ss01" 1,"ss06" 1;
+      }
+    </style>
+      <!-- Google Icons -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+   </head>
+   <body>
+      <!-- As a heading -->
+      <nav class="navbar fixed-top navbar-light bg-light">
+         
+         <span class="image"> WELLSTARWELL
+            <!-- <svg  width="200" height="96" viewBox="0 0 405 96" fill="none" xmlns="http://www.w3.org/2000/svg"></svg> -->
+         </span>
+         <form class="form-inline">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">My Chart</button>
+          </form> 
+      </nav>
+      <!-- Begin page content -->
+      <div class="container-fluid">
+
+         <!-- Home page -->
+         <div id="page-home" class="active">
+            <h1 class="hero-text" id="main" tabindex="0">
+               <span style="color: #00a7e1;">SAFE</span><br>COVID<span style="color: #00a7e1;">CARE</span>
+           </h1>
+            <div class="block">
+              <!-- <h2>
+                 The standard Lorem Ipsum passage, used since the 1500s</h2> -->
+
+                 <p class="hero-content">Amid the surge of COVID-19, Wellstar is here to help you stay safe and well, 
+                    providing expert care for any health concerns you may have. Get the 
+                    <a style="color: #8347ad; text-decoration: underline;" href="/community/covid-19">
+                     latest updates on COVID-19</a> testing, vaccines and prevention. </p>
+            </div>
+         </div>
+         <div class="home-hero-ctas wide">
+
+            <a href="/community/covid-19" class="home-hero-cta homectalink-1">
+            <i class="material-icons">coronavirus</i>
+                COVID-19 Info
+            </a>
+            <a href="/physicians" class="home-hero-cta homectalink-2">
+                                        <i class="material-icons">medication</i>
+                Find a Doctor
+            </a>
+            <a href="https://www.zocdoc.com/wl/wellstar/search?utm_source=wswebsite&amp;utm_medium=homepagecta&amp;utm_campaign=zocdoc_redirect" class="home-hero-cta homectalink-3">
+                                        <i class="material-icons">book_online</i>
+                Book Appointment
+            </a>
+            <a href="/locations" class="home-hero-cta homectalink-4">
+                                        <i class="material-icons">place</i>
+                Find a Location
+            </a>
+            <a href="/for-patients/pay-your-bill" class="home-hero-cta homectalink-5">
+                                        <i class="material-icons">receipt_long</i>
+                Pay Your Bill
+            </a>
+            <a href="/community/foundation" class="home-hero-cta homectalink-6">
+                                        <i class="material-icons">help_outline</i>
+                Donate to Help
+            </a>
+</div>
+
+         <!-- Feed page -->
+         <div id="page-feed" class="inactive">
+           <h1>Feed Page</h1>
+           <div class="block">
+            <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+          </div>
+          <div class="block">
+            <h2>The standard Lorem Ipsum passage</h2>
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+          </div>
+          <div class="block">
+            <h2>The standard Lorem Ipsum passage</h2>
+
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+          </div>
+         </div>
+
+         <!-- Create page -->
+         <div id="page-create" class="inactive">
+           <h1>Create Page</h1>
+            <form>
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label for="inputEmail4" class="col-form-label">Email</label>
+                     <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                     <label for="inputPassword4" class="col-form-label">Password</label>
+                     <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label for="inputAddress" class="col-form-label">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+               </div>
+               <div class="form-group">
+                  <label for="inputAddress2" class="col-form-label">Address 2</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+               </div>
+               <div class="form-row">
+                  <div class="form-group col-md-6">
+                     <label for="inputCity" class="col-form-label">City</label>
+                     <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-md-4">
+                     <label for="inputState" class="col-form-label">State</label>
+                     <select id="inputState" class="form-control">Choose</select>
+                  </div>
+                  <div class="form-group col-md-2">
+                     <label for="inputZip" class="col-form-label">Zip</label>
+                     <input type="text" class="form-control" id="inputZip">
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="form-check">
+                     <label class="form-check-label">
+                     <input class="form-check-input" type="checkbox"> Check me out
+                     </label>
+                  </div>
+               </div>
+               <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
+         </div>
+
+         <!-- Account page -->
+         <div id="page-account" class="inactive">
+            <h2>Account Page</h2>
+            <div class="block">
+              <h2>The standard Lorem Ipsum passage</h2>
+  
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+            </div>
+         </div>
+      </div>
+
+      <!-- Bottom Nav Bar -->
+      <footer class="footer">
+         <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
+            <button id="home" type="button" class="btn btn-secondary button-active">
+               <div class="selector-holder">
+                  <i class="material-icons">support_agent</i>
+                  <span>Urgent Care</span>
+               </div>
+            </button>
+            <button id="feed" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">emergency</i>
+                  <span>Emergency Care</span>
+               </div>
+            </button>
+            <button id="create" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">medication</i>
+                  <span>Find a Doctor</span>
+               </div>
+            </button>
+            <button id="account" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">place</i>
+                  <span>Find a Location</span>
+               </div>
+            </button>
+            <button id="account" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">medical_services</i>
+                  <span>Our Services</span>
+               </div>
+            </button>
+            <button id="account" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">receipt_long</i>
+                  <span>Pay Your Bill</span>
+               </div>
+            </button>
+            <button id="account" type="button" class="btn btn-secondary button-inactive">
+               <div class="selector-holder">
+                  <i class="material-icons">local_hospital</i>
+                  <span>Your Medical Record (MyChart)</span>
+               </div>
+            </button>
+         </div>
+      </footer>
+      <!-- Bootstrap core JavaScript -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+      <!-- JS needed for this page -->
+      <!-- <script src="js/main.js"></script> -->
+      <script>
+//Global variable for starting page
+var currentPageId = "page-home";
+var currentSelectorId = "home";
+
+//Function for getting the button ids
+function getButtons(){
+    //List of button ids
+    var list = ["home", "feed", "create", "account"];
+    return list;
+}
+
+//Make sure the window is loaded before we add listeners
+window.onload = function(){
+    var pageIdList = getButtons();
+    //Add an event listener to each button
+    pageIdList.forEach(function(page){
+        document.getElementById(page).addEventListener("click", changePage, false);
+    });
+}
+
+function changePage(){
+    var currentSelector = document.getElementById(currentSelectorId);
+    var currentPage = document.getElementById(currentPageId);
+    var pageId = "page-"+this.id;
+    var page = document.getElementById(pageId);
+    var pageSelector = document.getElementById(this.id);
+    
+    if(page.classList.contains("active")){
+        return;
+    }
+
+    currentSelector.classList.remove("button-active");
+    currentSelector.classList.add("button-inactive");
+    currentPage.classList.remove("active");
+    currentPage.classList.add("inactive");
+
+    pageSelector.classList.remove("button-inactive");
+    pageSelector.classList.add("button-active");
+
+    page.classList.remove("inactive");
+    page.classList.add("active");
+
+    //Need to reset the scroll
+    window.scrollTo(0,0); 
+
+    currentSelectorId = this.id;
+    currentPageId = pageId;
+}
+
+
+      </script>
+   </body>
+</html>
+
